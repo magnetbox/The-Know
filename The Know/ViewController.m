@@ -37,14 +37,17 @@
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 800, 800);
-    [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(mapView.userLocation.coordinate, 10000, 10000);
+    MKCoordinateRegion adjustRegion = [mapView regionThatFits:region];
+    [mapView setRegion:adjustRegion animated:YES];
 }
 
 - (IBAction)zoomIn:(id)sender {
     MKUserLocation *userLocation = self.mapView.userLocation;
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate, 20000, 20000);
-    [self.mapView setRegion:region animated:NO];
+    NSLog(@"Location: %@",userLocation);
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 10000, 10000);
+    MKCoordinateRegion adjustRegion = [self.mapView regionThatFits:region];
+    [self.mapView setRegion:adjustRegion animated:YES];
 }
 
 
