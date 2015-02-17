@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E004FD491A5F98490007EC0B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E004FD481A5F98490007EC0B /* CoreLocation.framework */; };
 		E042EBBB1A5A19810084298B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E042EBBA1A5A19810084298B /* main.m */; };
 		E042EBBE1A5A19810084298B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E042EBBD1A5A19810084298B /* AppDelegate.m */; };
 		E042EBC11A5A19810084298B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E042EBC01A5A19810084298B /* ViewController.m */; };
@@ -14,6 +15,7 @@
 		E042EBC61A5A19810084298B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E042EBC51A5A19810084298B /* Images.xcassets */; };
 		E042EBC91A5A19810084298B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E042EBC71A5A19810084298B /* LaunchScreen.xib */; };
 		E042EBD51A5A19810084298B /* The_KnowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E042EBD41A5A19810084298B /* The_KnowTests.m */; };
+		E042EBDF1A5A19D50084298B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E042EBDE1A5A19D50084298B /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E004FD481A5F98490007EC0B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E042EBB51A5A19810084298B /* The Know.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Know.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E042EBB91A5A19810084298B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E042EBBA1A5A19810084298B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		E042EBCE1A5A19810084298B /* The KnowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The KnowTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E042EBD31A5A19810084298B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E042EBD41A5A19810084298B /* The_KnowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = The_KnowTests.m; sourceTree = "<group>"; };
+		E042EBDE1A5A19D50084298B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E004FD491A5F98490007EC0B /* CoreLocation.framework in Frameworks */,
+				E042EBDF1A5A19D50084298B /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,8 @@
 		E042EBAC1A5A19810084298B = {
 			isa = PBXGroup;
 			children = (
+				E004FD481A5F98490007EC0B /* CoreLocation.framework */,
+				E042EBDE1A5A19D50084298B /* MapKit.framework */,
 				E042EBB71A5A19810084298B /* The Know */,
 				E042EBD11A5A19810084298B /* The KnowTests */,
 				E042EBB61A5A19810084298B /* Products */,
@@ -414,6 +422,7 @@
 				E042EBDA1A5A19810084298B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E042EBDB1A5A19810084298B /* Build configuration list for PBXNativeTarget "The KnowTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +431,7 @@
 				E042EBDD1A5A19810084298B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

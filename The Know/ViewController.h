@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 
+@property(nonatomic, retain) IBOutlet MKMapView *mapView;
+@property(nonatomic, retain) CLLocationManager *locationManager;
+- (IBAction)zoomIn:(id)sender;
 
 @end
 

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vah-u7-ObC">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,58 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pg3-TP-DNa">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Center" id="C7w-7m-ghB">
+                                        <connections>
+                                            <action selector="zoomIn:" destination="BYZ-38-t0r" id="Ixj-Bo-Qxe"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rVG-2J-J6B">
+                                <rect key="frame" x="0.0" y="0.0" width="605" height="556"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ye3-4W-4Kq"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="rVG-2J-J6B" secondAttribute="trailing" constant="-21" id="0bf-Eo-Swr"/>
+                            <constraint firstItem="Pg3-TP-DNa" firstAttribute="top" secondItem="rVG-2J-J6B" secondAttribute="bottom" id="40d-55-dEz"/>
+                            <constraint firstItem="rVG-2J-J6B" firstAttribute="leading" secondItem="Pg3-TP-DNa" secondAttribute="leading" id="DvY-pp-JAK"/>
+                            <constraint firstItem="rVG-2J-J6B" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ngk-VA-EWh"/>
+                            <constraint firstAttribute="trailing" secondItem="Pg3-TP-DNa" secondAttribute="trailing" id="WEQ-2r-iUT"/>
+                            <constraint firstItem="rVG-2J-J6B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fSD-FV-b9H"/>
+                            <constraint firstItem="Pg3-TP-DNa" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="yLI-a7-GLm"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="frU-ma-IxD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1212" y="-337"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xLV-06-F9e">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vah-u7-ObC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tnz-aS-qmN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="c3A-FO-cVl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IE3-Al-8NJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="458" y="-343"/>
         </scene>
     </scenes>
 </document>
